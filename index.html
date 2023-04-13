@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+      
+    <title>Thank you</title>
+</head> 
+<style> 
+body{
+    margin: 0;
+    font-family:"Segoe UI","Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left; 
+    background-color: #e9ecef;
+
+}  
+div{
+    text-align: center; 
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+    margin-top: 25vh;
+}
+a{
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem; 
+    color: #fff;
+    background-color: #151528; 
+    display: inline-block;
+    font-weight: 400;
+    text-align: center; 
+    text-decoration: none;
+}
+h1{
+    font-size: 4.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.mesg{
+    margin: 1rem;
+}
+</style>
+<body>  
+    <div>
+        <h1>Thank You!</h1>
+        <p class="mesg">
+            <strong>I have received your message</strong> 
+            <!-- for further instructions on how to complete your account setup. -->
+            <br>
+            I will reply to you soon through email.
+        </p>
+        <p>Redirecting <span id="timer"></span>s.</p>
+</div>
+        <hr> 
+        <script type="text/javascript">
+            var count = 4; // The delay in seconds before redirecting.
+            var redirect = "https://guruakashsm.github.io/Guruakash_portfolio/#"; // The redirection's landing page.
+            
+            function countDown() {
+                if(count >= 0){
+                    document.getElementById("timer").innerHTML = count--;
+                    setTimeout("countDown()", 1000);
+                }else{
+                    window.location.href = redirect;
+                }
+            }
+            countDown();
+        </script>
+    
+  </body>
+</html>
